@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div ng-show="ctrlInfo.signedUp">
+            <h1>Showing information for user.</h1>
+            <p>First name: {{ctrlInfo.user.firstName}}</p>
+            <p>Last name: {{ctrlInfo.user.lastName}}</p>
+            <p>Email: {{ctrlInfo.user.email}}</p>
+            <p>Phone: {{ctrlInfo.user.phone}}</p>
+            <p>Favorite dish: {{ctrlInfo.user.favoriteDishDetails.name}}</p>
+            <p>Description: {{ctrlInfo.user.favoriteDishDetails.description}}</p>
+            <img class="img-responsive" ng-src="{{ctrlInfo.apiPath}}/images/{{ctrlInfo.user.favoriteDish}}.jpg" alt="{{ctrlInfo.user.favoriteDishDetails.name}}" />
+
+        </div>
+
+        <div ng-hide="ctrlInfo.signedUp">
+            <h1>Not Signed Up Yet. <a class="btn btn-default" ui-sref="public.signup">Sign Up Now!</a></h1>
+        </div>
+    </div>
+</div>
